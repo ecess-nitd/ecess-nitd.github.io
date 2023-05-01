@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Kavoon&family=Rubik+Gemstones&family=Rubik+Vinyl&display=swap'); 
+*{
+   margin:0;
+   padding: 0;
+   color: rgb(239, 228, 228);
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+}
+footer{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px 200px;
+    text-align: center;
+    font-style: italic;
+    height: 15rem;
+    
+}
+.box p{
+    text-align: center;
+    padding: 5px 5px 5px 5px;
+    color: aliceblue;
+   
+}
+
+.box.social-icon:hover {
+    color: brown;
+}
+.bottom{ 
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding: 0 300px;
+}
+.fa-brands{
+    padding: 100px auto;
+}

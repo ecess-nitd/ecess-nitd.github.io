@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faculty Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+      .parallax {
+        /* The image used */
+        background-image: url("images/background.jpg");
+        
+        
+        /* Set a specific height */
+        min-height: 500px; 
+      
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      @font-face {
+    font-family: 'Georama';
+    font-style: normal;
+    font-weight: 100 900;
+    font-stretch: 100%;
+    ascent-override: 82%;
+    descent-override:14%;
+    src: url(https://fonts.gstatic.com/s/georama/v8/MCoMzAn438bIEyxFf6swMnNpvPcUwW4u4w5QJu4.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Georama';
+    font-style: italic;
+    font-weight: 100 900;
+    font-stretch: 100%;
+    ascent-override: 82%;
+    descent-override:14%;
+    src: url(https://fonts.gstatic.com/s/georama/v8/MCoCzAn438bIEyxFVaIC0ZMQ72G6xnvmodYVFuxpFw.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  body {
+    font-family: 'Georama', sans-serif;
+  }
+  .staff-wrapper {
+    display:grid;
+    grid-auto-flow: dense;
+    grid-template-columns:repeat(auto-fill, minmax( min(280px,100%),1fr));
+    padding:2px 100px;
+    gap:2px 14px;
+    justify-items:center;
+    grid-column-gap: 9rem;
+  }
+  
+  .purpleAliens {border:solid purple;}
+  .supercool {box-shadow:0 0 9px 2px #911; }
+  
+  .staff-box {
+    border:solid 2px #a9dbe4;
+    background:radial-gradient( circle at 50% 0% , #fff 25%, #e8fbff );
+    padding:0.6rem;
+    padding-top:0;
+    text-align:center;
+    width:100%;
+    max-width:280px;
+    margin: 4rem;
+    margin-left: 4rem;
+    box-shadow:inset 0 10px #89d7d6, 0 1px 10px #0343;
+
+  }
+  .staff-box img {
+    margin-top:-60px;
+    margin-bottom:1px;
+    border-radius:50%; 
+    border:solid 3px #b7d3d8;
+    width:100%;
+    max-width:128px; 
+    aspect-ratio:1/1;
+  }
+  .staff-box header {
+    font-size:1.2em;
+    line-height:1;
+    font-weight:bold;
+  }
+  .staff-box p , .staff-box a {
+    display:block;
+    font-size:16px; 
+    margin:0.5em 0;
+    line-height:1.05;
+  }
+  
+  h1{
+    text-align: center;
+    padding-bottom: 4rem;
+  }
+  .preload-finish{
+    opacity: 0;
+    pointer-events: none;
+  }
+  .loading-page{
+    background: #000;
+    width:100%;
+    height:720px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    z-index: 100;
+    transition: opacity 0.5s ease;
+}
+
+.name{
+    font-size:90px;
+    font-weight:600;
+    display: flex;
+    flex-direction: row;
+    background-image: -webkit-linear-gradient(left,aqua,green);
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip:text; 
+}
+
+.decoration{
+    width:110px;
+    height:8px;
+    border-radius:4px;
+    background-color:white;
+    animation: color 2s ease-in-out infinite;
+    position: relative;
+    overflow: hidden;
+}
+.decoration div{
+    height:100%;
+    /* width:25px; */
+    background-color:#f10707;
+    position: absolute;
+    animation: tex 3s ease-in-out infinite;
+    transition:0.5s;
+}
+@keyframes tex{
+    0%{
+        
+        width:0px;
+    }
+    25%{
+    
+        width:110px;
+    }
+    50%{
+        width:55px;
+    }
+    100%{
+        width:0px;
+    }
+}
+      </style>
+  </head>
+  <div class="parallax">
+<body>
+  <div class="loading-page">
+    <div class="name">  <p>E</p><p>C</p><p>E</p><p>S</p><p>S</p>   </div>
+    <div class="decoration"><div></div></div>
+</div>
+    <h1>Faculty Page</h1>
+<div class="staff-wrapper maxwidth"> 
+  
+  <article class="staff-box"> 
+    <img src="images/Durbadal Mandal.c6868719.jpeg" alt="Susan Stark" />
+    <header>Durbadal Mandal</header>
+    <p style="color:blue; font-weight: 500">HOD</p>
+    <h6>RESEARCH INTEREST</h6>
+    <h6 style="color: gray;">Antenna Optimization, Signal Processing, Soft Comp</h6>
+    <a href="mailto:">durbadal.mondal@ece.nitdgp.ac.in</a>
+  </article>
+  
+  <article class="staff-box">
+    <img src="images/Aniruddha Chandra.3875a3c3.jpeg" alt="Darlene Rodgers" />
+    <header>Aniruddha Chandra</header>
+    <p style="color:blue; font-weight: 500">ASSOCAITE PROFESSOR</p>
+    <h6>RESEARCH INTEREST</h6>
+    <h6 style="color: gray;">mmWave for 5G, Vehicular communication, Free Space</h6>
+    <a href="mailto:">aniruddha.chandra@ece.nitdgp.ac.in</a>
+    </article>
+  
+  <article class="staff-box">
+    <img src="images/Anup Kumar Bhattacharjee.f2f6f6e5.jpeg" alt="Bonnie Freshly" />
+    <header>Anup Kumar Bhattacharjee</header>
+    <p style="color:blue; font-weight: 500">PROFESSOR</p>
+    <h6>RESEARCH INTEREST</h6>
+    <h6 style="color: gray;">Microstrip Antenna, RF and Microwave Devices</h6>
+    <a href="mailto:">akbece12@yahoo.com</a>
+  </article>
+  
+  <article class="staff-box">
+    <img src="images/Aurpan Majumder.35942c32.jpeg" alt="Kerry Leigh" />
+    <header>Aurpan Majumder</header>
+    <p style="color:blue; font-weight: 500">ASSISTANT PROFESSOR</p>
+    <h6>RESEARCH INTEREST</h6>
+    <h6 style="color: gray;">Computational Systems Biology, Digital Image</h6>
+    <a href="mailto:">aurpan.majumder@ece.nitdgp.ac.in</a>
+  </article>
+  
+  <article class="staff-box">
+    <img src="images/Bansibadan Maji.c9d36593.jpeg" alt="Matt Howard" />
+    <header>Bansibadan Maji</header>
+    <p style="color:blue; font-weight: 500">PROFESSOR</p>
+    <h6>RESEARCH INTEREST</h6>
+    <h6 style="color: gray;">Electronics and Communication Engineering</h6>
+    <a href="mailto:">bansibadan.maji@ece.nitdgp.ac.in</a>
+  </article>
+  
+  <article class="staff-box">
+    <img src="images/ECEHod.9cea8113.jpeg" alt="Javier Rivera" />
+    <header>Asis Kumr Mal</header>
+    <p style="color:blue; font-weight: 500">PROFESSOR</p>
+    <h6>RESEARCH INTEREST</h6>
+    <h6 style="color: gray;">Analog and Mixed-Signal VLSI Digitally Assisted</h6>
+    <a href="mailto:">akmal@ece.nitdgp.ac.in</a>
+  </article>
+  <article class="staff-box"> 
+    <img src="images/Gautam Kumar Mahanti.231eedd8.jpeg" alt="Susan Stark" />
+    <header>Gautam Kumar Mahanti</header>
+    <p style="color:blue; font-weight: 500">PROFESSOR(HAG)</p>
+    <h6>RESEARCH INTEREST</h6>
+    <h6 style="color: gray;">Array Antenna Synthesis, Printed Antenna, Meta-heu</h6>
+    <a href="mailto:">gautammahanti@yahoo.com</a>
+  </article>
+  <article class="staff-box"> 
+    <img src="images/Hemanta Kumar Mondal.47e35501.jpeg" alt="Susan Stark" />
+    <header>Hemanta Kumar Mondal</header>
+    <p style="color:blue; font-weight: 500">ASSISTANT PROFESSOR</p>
+    <h6>RESEARCH INTEREST</h6>
+    <h6 style="color: gray;">Neuromorphic computing, Parallel computing</h6>
+    <a href="mailto:">hemanta.mondal@ece.nitdgp.ac.in</a>
+  </article>
+  <article class="staff-box"> 
+    <img src="images/SDR Sir.37083980.jpg" alt="Susan Stark" />
+    <header>Sanjay Dhar Roy</header>
+    <p style="color:blue; font-weight: 500">ASSOCAITE PROFESSOR</p>
+    <h6>RESEARCH INTEREST</h6>
+    <h6 style="color: gray;">Wireless Communication(Radio Resource Management, Cognitive Radio Networks, Heterogenous Networks)</h6>
+    <a href="mailto:">sanjay.dharroy@ece.nitdgp.ac.in</a>
+  </article>
+  <article class="staff-box"> 
+    <img src="images/Nilanjan Sir.d707a345.jpg" alt="Susan Stark" />
+    <header>Nilanjan Chattaraj</header>
+    <p style="color:blue; font-weight: 500">ASSISTANT PROFESSOR</p>
+    <h6>RESEARCH INTEREST</h6>
+    <h6 style="color: gray;">Smart materials based devices and Structronic Systems</h6>
+    <a href="mailto:">nilanjan.chattaraj@ece.nitdgp.ac.in</a>
+  </article>
+  <article class="staff-box"> 
+    <img src="images/Rajat Sir.3149dfea.jpg" alt="Susan Stark" />
+    <header>Rajat Mahapatra</header>
+    <p style="color:blue; font-weight: 500">PROFESSOR</p>
+    <h6>RESEARCH INTEREST</h6>
+    <h6 style="color: gray;">Resistive Memory Devices, HEMT Devices</h6>
+    <a href="mailto:">rajat.mahapatra@ece.nitdgp.ac.in</a>
+  </article>
+  <article class="staff-box"> 
+    <img src="images/Rajib Kar.20867a2b.jpg" alt="Susan Stark" />
+    <header>Rajib Kar</header>
+    <p style="color:blue; font-weight: 500">ASSOCAITE PROFESSOR</p>
+    <h6>RESEARCH INTEREST</h6>
+    <h6 style="color: gray;">VLSI, Signal Processing</h6>
+    <a href="mailto:">rajib.kar@ece.nitdgp.ac.in</a>
+  </article>
+  <article class="staff-box"> 
+    <img src="images/Rishi Todani.aa980407.jpg" alt="Susan Stark" />
+    <header>Rishi Todani</header>
+    <p style="color:blue; font-weight: 500">PROJECT FACULTY</p>
+    <h6>RESEARCH INTEREST</h6>
+    <h6 style="color: gray;">Analog and Mixed Signal Design</h6>
+    <a href="mailto:">rishi.todani@ece.nitdgp.ac.in</a>
+  </article>
+  <article class="staff-box"> 
+    <img src="images/Rowdra Sir.b98523f9.jpg" alt="Susan Stark" />
+    <header>Rowdra Ghatak</header>
+    <p style="color:blue; font-weight: 500">PROFESSOR</p>
+    <h6>RESEARCH INTEREST</h6>
+    <h6 style="color: gray;">Fractal Antenna, metamaterials</h6>
+    <a href="mailto:">rowdra.ghatak@ece.nitdgp.ac.in</a>
+  </article>
+  <article class="staff-box"> 
+    <img src="images/Sapna Mam.f4a4527e.jpg" alt="Susan Stark" />
+    <header>Sapana Ranwa</header>
+    <p style="color:blue; font-weight: 500">ASSISTANT PROFESSOR</p>
+    <h6>RESEARCH INTEREST</h6>
+    <h6 style="color: gray;">Metal Oxide Semiconductors based gas sensors</h6>
+    <a href="mailto:">sapana.ranwa@ece.nitdgp.ac.in</a>
+  </article>
+  <article class="staff-box"> 
+    <img src="images/Sujit SIr.979bc15c.jpg" alt="Susan Stark" />
+    <header>Sujit Kr. Mandal</header>
+    <p style="color:blue; font-weight: 500">ASSISTANT PROFESSOR</p>
+    <h6>RESEARCH INTEREST</h6>
+    <h6 style="color: gray;">Synthesis of Antenna Arrays using Evolutionary Algorithms, Optimized Pattern Synthesis in Time-Modulated Antenna Arrays, etc.</h6>
+    <a href="mailto:">sujit.mandal@ece.nitdgp.ac.in</a>
+  </article>
+  <article class="staff-box"> 
+    <img src="images/Sumit Kundu.0d1dd343.jpg" alt="Susan Stark" />
+    <header>Sumit Kundu</header>
+    <p style="color:blue; font-weight: 500">PROFESSOR(HAG)</p>
+    <h6>RESEARCH INTEREST</h6>
+    <h6 style="color: gray;">Wireless Communication & Networking</h6>
+    <a href="mailto:">sumit.kundu@ece.nitdgp.ac.in</a>
+  </article>
+  <article class="staff-box"> 
+    <img src="images/Susanta Sir.506f7535.jpg" alt="Susan Stark" />
+    <header>Susanta Sen</header>
+    <p style="color:blue; font-weight: 500">EMERITUS PROFESSOR</p>
+    <h6>RESEARCH INTEREST</h6>
+    <h6 style="color: gray;">Quantam electron devices, VLSI Design</h6>
+    <a href="mailto:">susanta.rpe@gmail.com</a>
+  </article>
+  <article class="staff-box"> 
+    <img src="images/Tapas Sir.d4046e9d.jpg" alt="Susan Stark" />
+    <header>Tapas Sadhukhan</header>
+    <p style="color:blue; font-weight: 500">ASSISTANT PROFESSOR</p>
+    <h6>RESEARCH INTEREST</h6>
+    <h6 style="color: gray;">Signals, Systems & Transmission</h6>
+    <a href="mailto:"></a>
+  </article>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+</div>
+<script>
+  window.addEventListener("load",function(){
+    const preloader = document.querySelector('.loading-page');
+    preloader.classList.add('preload-finish');
+  });
+
+</script>
+
+
+
+
+</body>
+</html>

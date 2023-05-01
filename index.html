@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="Home.css" />
+    
+    <title>ECESS</title>
+</head>
+<body>
+    <div id="loading-page">
+        <div class="name">  <p>E</p><p>C</p><p>E</p><p>S</p><p>S</p>   </div>
+        <div class="decoration"><div></div></div>
+    </div>    
+   <div>
+    <nav style="position:fixed;">
+        <div class="logo">
+            <img src="./logo2.png" alt="Logo Image">
+        </div>
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/faculty/index.html">FACULTY</a></li>
+            <li><a href="/about.html">ABOUT US</a></li>
+            <li><a href="/team/index.html">TEAM</a></li>
+        </ul>
+    </nav>
+</div>
+    <div class="primary-section">
+       
+    </div>
+  <div class="secondary-section">
+    <div class="section">
+        <div class="logo"> <img  class="logo" src="./logo2.png" alt=""  /> </div>
+        <div class="heading"> MISSION  </div>
+        <div class="descreption">
+            To develop a community by the students of the Electronics and Communication Department that will work towards the  welfare of the department and its students in general.
+To develop a strong alumni network and involve them in conducting various seminars as well as career guidance assistance via interaction sessions with the students of Electronics and Communication Engineering.
+To systematically  access to the computer laboratory of the department for maximum utilization by the students and  software that can be made available to the students to hone their software skills and perform necessary simulations.
+           
+        </div>
+    </div>
+    <div class="section two">
+        <div class="logo"> <img  class="logo" src="./logo2.png" alt=""  /> </div>
+        <div class="heading"> VISION  </div>
+        <div class="descreption">
+           <p>To produce highly competent and resourcefull young engineers who can perform well in varied professions.</p> 
+           <p> To develop a strong fundamental base which enable students to explore academic and collaborative interactions with industry, academia and research organizations.</p> 
+           <p> To develop excellent research facilities.</p> 
+        </div>
+    </div>
+    <div class="section one">
+        <div class="logo"> <img  class="logo" src="./logo2.png" alt=""  /> </div>
+        <div class="heading"> VALUES  </div>
+        <div class="descreption">
+The embryonic formation of the Department of Electronics and Communication Engineering was in the year 1983 with the introduction of an undergraduate
+course.Situated amidst lush green campus with teak plantations,the Department, over the time, has grown in several dimensions and 
+provides a magnetic ambience in teaching and learning.The faculties are engaged in research in diverse topics focussing in
+Telecommunication, Antenna and Microwave, Microelectronics and  VLSI, Signal and Image processing and Computational Systems Biology.  
+        </div>
+    </div>
+ </div>
+<div class="center">
+  <div class="carousel">
+    <p class="gallery">GALLERY</p>
+    <div class="container">
+        <div id="carousel">
+          <div>
+              <img src="./circuit-img.jpg" alt="">
+          </div>
+          <div>
+              <img src="./ecedepartment1.jpeg" alt="">
+          </div>
+          <div>
+              <img src="./ecedepartment2.jpeg" alt="">
+          </div>
+          <div>
+              <img src="./nitdgp1.png" alt="">
+          </div>
+          <div>
+              <img src="./circuit-img.jpg" alt="">
+          </div>
+          <div>
+              <img src="./ecedepartment1.jpeg" alt="">
+          </div>
+          <div>
+              <img src="./ecedepartment2.jpeg" alt="">
+          </div>
+          <div>
+              <img src="./nitdgp1.png" alt="">
+          </div>
+          <div>
+              <img src="./ecedepartment2.jpeg" alt="">
+          </div>
+        </div>
+    </div>
+     <div style="height:5rem;"></div>
+</div>
+</div>
+</div>
+  <div class="footer">
+    <a href="#"><span class="fa fa-facebook"></span></a>
+    <a href="#"><span class="fa fa-twitter"></span></a>
+    <a href="#"> <span class="fa fa-instagram"></span></a>
+    <a href="#"><span class="fa fa-envelope-open-o"></span></a>
+    
+  </div>
+  <div class="copyright">
+    <p>
+        <i class="fa fa-copyright"></i>2023 ECESS NITDGP
+    </p>
+  </div>
+</div>
+      <script>
+        const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+const links = document.querySelectorAll(".nav-links li");
+hamburger.addEventListener('click', ()=>{
+   //Animate Links
+    navLinks.classList.toggle("open");
+    links.forEach(link => {
+        link.classList.toggle("fade");
+    });
+    //Hamburger Animation
+    hamburger.classList.toggle("toggle");
+ });
+
+ window.addEventListener("load",function(){
+      const preloader = document.getElementById('loading-page');
+      preloader.classList.add('preload-finish');
+    });
+    </script>
+</body>
+</html>

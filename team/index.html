@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="style.css" />
+
+    <!--Tailwind CSS-->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style type="text/tailwindcss">
+        @layer components {
+          .card {
+            @apply flex items-center justify-center flex-col gap-2 p-5 w-full sm:w-72 h-full bg-gray-100 border rounded-2xl;
+          }
+        }
+        @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+  
+        * {
+          margin: 0;
+          padding: 0;
+  
+          box-sizing: border-box;
+        }
+  
+        body {
+          background-color: #ffffff;
+          font-family: "Poppins", sans-serif;
+        }
+        .preload-finish {
+          opacity: 0;
+          pointer-events: none;
+        }
+        .loading-page {
+          background: #000;
+          width: 100%;
+          height: 720px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          position: fixed;
+          z-index: 100;
+          transition: opacity 0.5s ease;
+        }
+  
+        .name {
+          font-size: 90px;
+          font-weight: 600;
+          display: flex;
+          flex-direction: row;
+          background-image: -webkit-linear-gradient(left, aqua, green);
+          -webkit-text-fill-color: transparent;
+          -webkit-background-clip: text;
+        }
+  
+        .decoration {
+          width: 110px;
+          height: 8px;
+          border-radius: 4px;
+          background-color: white;
+          animation: color 2s ease-in-out infinite;
+          position: relative;
+          overflow: hidden;
+        }
+        .decoration div {
+          height: 100%;
+          /* width:25px; */
+          background-color: #f10707;
+          position: absolute;
+          animation: tex 3s ease-in-out infinite;
+          transition: 0.5s;
+        }
+        @keyframes tex {
+          0% {
+            width: 0px;
+          }
+          25% {
+            width: 110px;
+          }
+          50% {
+            width: 55px;
+          }
+          100% {
+            width: 0px;
+          }
+        }
+  
+       
+        .nav-links li a {
+          color: burlywood;
+          text-decoration: none;
+          margin: 0 0.7vw;
+        }
+        .nav-links li a:hover {
+          color: #61dafb;
+        }
+        .nav-links li {
+          position: relative;
+        }
+        .nav-links li a::before {
+          content: "";
+          display: block;
+          height: 3px;
+          width: 0%;
+          background-color: #61dafb;
+          position: absolute;
+          transition: all ease-in-out 250ms;
+          margin: 0 0 0 10%;
+        }
+        .nav-links li a:hover::before {
+          width: 80%;
+        }
+      </style>
+      <!--Tailwind CSS-->
+  
+      <!--Font-Awesome-->
+  
+      <style>
+        .parallax {
+          /* The image used */
+          background-image: url("images/background.jpg");
+  
+          /* Set a specific height */
+          min-height: 500px;
+  
+          /* Create the parallax scrolling effect */
+          background-attachment: fixed;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          width : 100vw;
+        }
+      </style>
+</head>
+
+
+<style>
+    *{
+        padding: 0%;
+        margin: 0%;
+    }
+    .total-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* margin-top:100px; */
+    }
+    .main{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:darkblue;
+    font-style:normal;
+    font-size:40px;
+    font-weight: 600;
+    margin-top:140px;
+    margin-bottom:20px;
+    animation:rotate 2s ease-in-out infinite;
+    border:5px solid red;
+    padding:3px 3px;
+    border-radius:5px;
+}
+
+.writings{
+    width:950px;
+    height:510px;
+    border-radius:10px;
+    background-color: dodgerblue;
+    font-weight: 500;
+    font-size:28px;
+    padding:15px 15px;
+}
+.writings:hover{
+    scale:1.026;
+    box-shadow:2px 2px 2px 2px  grey;
+}
+.event-heading{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:darkblue;
+    font-style:normal;
+    font-size:40px;
+    font-weight: 600;
+    margin-top:150px;
+    margin-bottom:30px;
+    border-radius:5px;
+    border:5px solid red;
+    padding:3px 3px;
+    animation:rotate 2s ease-in-out infinite;
+}
+/* .event-heading::before{
+   content:' ';
+   width:6px;
+   height:32px;
+   background-color: black;
+   margin-right:1rem;
+   animation:increase 1s ease-in-out infinite;
+} */
+@keyframes increase {
+    from {
+        height:32px;
+    }
+    to{
+        height:16px;
+        filter: blur(1px);
+        opacity:.6;
+    }
+}
+@keyframes rotate{
+     0%{
+        border-left:5px solid teal;
+     }
+     25%{
+        border-left:5px solid teal;
+        border-top:5px solid teal;
+     }
+     50%{
+        border-left:5px solid teal;
+        border-top:5px solid teal;
+        border-right:5px solid teal;
+     }
+     75%{
+        border-left:5px solid teal;
+        border-top:5px solid teal;
+        border-right:5px solid teal;
+        border-bottom:5px solid teal;
+     }
+}
+.events-content{
+     display: flex;
+     gap:5rem;
+     flex-wrap: wrap;
+     align-items: center;
+     justify-content: center;
+}
+
+ /*  new cards  */ 
+:root {
+  --primary:rgb(99, 237, 207);
+  --secondary:rgb(204, 111, 232);
+  --dark: #212121;
+  --light: #F3F3F3;
+}
+
+.card {
+  width: 400px;
+  height:450px;
+  perspective: 1000px;
+}
+
+.card__inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+  
+}
+
+.card__inner.is-flipped {
+  transform: rotateY(180deg);
+}
+
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+}
+
+.card__face--front {
+  background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card__face--front h2 {
+  color: #FFF;
+  font-size: 32px;
+}
+
+.card__face--back {
+  background-color: var(--light);
+  transform: rotateY(180deg);
+}
+
+.card__content {
+  width: 100%;
+  height: 100%;
+}
+
+.card__header {
+  position: relative;
+  padding: 30px 10px 15px;
+}
+
+.card__header:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(to bottom left, var(--primary) 10%, var(--secondary) 115%);
+  z-index: -1;
+  border-radius: 0px 0px 50% 0px;
+}
+
+#pp {
+  display: block;
+  width:80%;
+  height:160px;
+  margin: 0 auto 5px;
+  border-radius:0%;
+  background-color: #FFF;
+  border: 5px solid #FFF;
+  object-fit: cover;
+  cursor: pointer;
+  transition:.3s;
+}
+.forUser{
+  scale:1.5;
+  object-fit: none;
+}
+.card__header h2 {
+  color: #FFF;
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.card__body {
+  padding:10px;
+  background-color:lightgreen;
+}
+
+.card__body h3 {
+  color: var(--dark);
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom:5px;
+}
+
+.card__body p {
+  display: flex;
+  justify-content: center;
+}
+.btn{
+  font-size: larger;
+  border-radius:4px;
+  color:black;
+  text-transform: uppercase;
+  font-weight:700;
+  padding:4px;
+  background-color:aqua;
+}
+.btn:hover{
+  background-color: blue;
+  color: white;
+}
+/* @media screen and (max-width:900px) {
+   .writings{
+    width:550px;
+    height:530px;
+    border-radius:6px;
+    font-weight:400;
+    font-size:22px;
+    padding:10px 10px;
+   }
+} */
+@media screen and (max-width:400px) {
+   .writings{
+    width:320px;
+    height:600px;
+    border-radius:6px;
+    font-weight:400;
+    font-size:18px;
+    padding:5px 5px;
+   }
+}nav{
+    height: 6rem;
+    width: 100vw;
+    background-color: #131418;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    position: fixed;
+    z-index: 10;
+}
+
+/*Styling logo*/
+.logo{
+    padding:1vh 1vw;
+    text-align: center;
+}
+.logo img {
+    height: 5rem;
+    width: 5rem;
+}
+
+/*Styling Links*/
+.nav-links{
+    display: flex;
+    list-style: none; 
+    width: 88vw;
+    padding: 0 0.7vw;
+    justify-content: space-evenly;
+    align-items: center;
+    text-transform: uppercase;
+}
+.nav-links li a{
+    color: burlywood;
+    text-decoration: none;
+    margin: 0 0.7vw;
+}
+.nav-links li a:hover {
+    color: #61DAFB;
+}
+.nav-links li {
+    position: relative;
+}
+.nav-links li a::before {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: #61DAFB;
+    position: absolute;
+    transition: all ease-in-out 250ms;
+    margin: 0 0 0 10%;
+}
+.nav-links li a:hover::before{
+    width: 80%;
+}
+
+
+/*Styling Hamburger Icon*/
+.hamburger div{
+    width: 30px;
+    height:3px;
+    background: #f2f5f7;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+.hamburger{
+    display: none;
+}
+
+
+/*Animating Hamburger Icon on Click*/
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    transition: all 0.7s ease;
+    width:0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+@media screen and (max-width:800px) {
+    nav{
+        position: fixed;
+        z-index: 3;
+    }
+    .hamburger{
+        display:block;
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top:50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+        transition: all 0.7s ease;
+    }
+    .nav-links{
+        position: fixed;
+        background: #131418;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(50px at 90% -20%);
+        -webkit-clip-path: circle(50px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+    }
+    .nav-links.open{
+        clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% -10%);
+        pointer-events: all;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .nav-links li:nth-child(1){
+        transition: all 0.5s ease 0.2s;
+    }
+    .nav-links li:nth-child(2){
+        transition: all 0.5s ease 0.4s;
+    }
+    .nav-links li:nth-child(3){
+        transition: all 0.5s ease 0.6s;
+    }
+    .nav-links li:nth-child(4){
+        transition: all 0.5s ease 0.7s;
+    }
+    .nav-links li:nth-child(5){
+        transition: all 0.5s ease 0.8s;
+    }
+    .nav-links li:nth-child(6){
+        transition: all 0.5s ease 0.9s;
+        margin: 0;
+    }
+    .nav-links li:nth-child(7){
+        transition: all 0.5s ease 1s;
+        margin: 0;
+    }
+    li.fade{
+        opacity: 1;
+    }
+    .secondary-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section {
+        width: 580px;
+        height:800px;
+        margin-bottom: 30px;
+    }
+
+    .one {
+        height:800px;
+    }
+
+    .two {
+        height:600px;
+    }
+
+    .descreption {
+        font-size: 24px;
+    }
+
+    .heading {
+        font-size: 34px;
+    }
+    
+ img { 
+    width:150%;
+    }
+    .writings{
+    width:550px;
+    height:530px;
+    border-radius:6px;
+    font-weight:400;
+    font-size:22px;
+    padding:10px 10px;
+   }
+}
+
+@media screen and (max-width:400px) {
+    .writings{
+    width:320px;
+    height:600px;
+    border-radius:6px;
+    font-weight:400;
+    font-size:18px;
+    padding:5px 5px;
+   }
+    nav{
+        position: fixed;
+        z-index: 3;
+    }
+    .hamburger{
+        display:block;
+        position:absolute;
+        cursor: pointer;
+        right: 5%;
+        top:50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+        transition: all 0.7s ease;
+    }
+    .nav-links{
+        position: fixed;
+        background: #131418;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(50px at 90% -20%);
+        -webkit-clip-path: circle(50px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+    }
+    .nav-links.open{
+        clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% -10%);
+        pointer-events: all;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .nav-links li:nth-child(1){
+        transition: all 0.5s ease 0.2s;
+    }
+    .nav-links li:nth-child(2){
+        transition: all 0.5s ease 0.4s;
+    }
+    .nav-links li:nth-child(3){
+        transition: all 0.5s ease 0.6s;
+    }
+    .nav-links li:nth-child(4){
+        transition: all 0.5s ease 0.7s;
+    }
+    .nav-links li:nth-child(5){
+        transition: all 0.5s ease 0.8s;
+    }
+    .nav-links li:nth-child(6){
+        transition: all 0.5s ease 0.9s;
+        margin: 0;
+    }
+    .nav-links li:nth-child(7){
+        transition: all 0.5s ease 1s;
+        margin: 0;
+    }
+    li.fade{
+        opacity: 1;
+    }
+    .secondary-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section {
+        width: 360px;
+        height:900px;
+        margin-bottom: 60px;
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+
+    .descreption {
+        font-size: 21px;
+    }
+
+    .one {
+        height:900px;
+        border-radius:10px;
+    }
+    
+    .two {
+        height:650px;
+        border-radius:10px;
+    }
+    
+img {
+    width:140%;
+}
+@keyframes text{
+    from{
+        font-size:80px;
+        font-weight:600;
+        rotate:0deg;
+    }
+    to{
+        font-size:140px;
+        font-weight:600;
+        rotate:360deg;
+    }
+    
+    
+}
+}
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  .fa-instagram {
+    background:red;
+    color: white;
+  }
+  .fa-facebook:hover{
+    background-color: white;
+    color:blue;
+  }
+  .fa-twitter:hover{
+    background-color: white;
+    color:blue;
+  }
+  .fa-instagram:hover{
+    background-color: white;
+    color: red;
+  }
+  .fa-envelope-open-o:hover{
+    background-color: white;
+    color: red;
+  }
+  .fa-envelope-open-o {
+    background:red;
+    color: white;
+  }
+  .footer{
+    position:static;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:200px;
+    background-color: #61DAFB;
+  }
+  .footer a{
+    border-radius:50%;
+    margin-right:1rem;
+  }
+  .copyright{
+    text-align: center;
+    position: fixed;
+    background-color: #61DAFB;
+  }
+</style>
+<body>
+    <div class="navbar">
+        <nav style="position:fixed;">
+            <div class="logo">
+                <img src="../logo2.png" alt="Logo Image">
+            </div>
+            <div class="hamburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/faculty/index.html">FACULTY</a></li>
+                <li><a href="/about.html">ABOUT US</a></li>
+                <li><a href="/team/index.html">TEAM</a></li>
+            </ul>
+        </nav>
+    </div>
+ <div class="total-content">
+    <div class="loading-page">
+        <div class="name">
+          <p>E</p>
+          <p>C</p>
+          <p>E</p>
+          <p>S</p>
+          <p>S</p>
+        </div>
+        <div class="decoration"><div></div></div>
+      </div>
+      <div class="parallax">
+        <div class="container mx-auto py-8 border">
+          <div class="flex flex-col text-center gap-4 mb-8 p-4">
+            <div class="text-purple-800 text-4xl mt-20 font-bold">Our team</div>
+          </div>
+  
+          <div class="flex items-center justify-center flex-wrap gap-4 p-4">
+            <div class="card">
+              <img
+                src="images/MY_IMAGE - Sriman Chakri.jpg"
+                class="w-24 h-24 rounded-full object-cover transition duration-200 hover:scale-110"
+              />
+  
+              <div class="text-gray-900 text-lg font-bold">SRIMAN CHAKRI</div>
+              <div class="text-purple-600">General Secretary</div>
+              <div
+                class="flex items-center justify-center gap-3 mt-2 w-auto h-5 text-gray-600"
+              >
+                <i
+                  class="fa-brands fa-twitter fa-lg cursor-pointer transition duration-200 hover:text-gray-400"
+                ></i>
+                <i
+                  class="fa-brands fa-linkedin fa-lg cursor-pointer transition duration-200 hover:text-gray-400"
+                ></i>
+                <i
+                  class="fa-brands fa-dribbble fa-lg cursor-pointer transition duration-200 hover:text-gray-400"
+                ></i>
+              </div>
+            </div>
+  
+            <div class="card">
+              <img
+                src="images/Rajdeep Mondal - Rajdeep Mondal.jpeg"
+                class="w-24 h-24 rounded-full object-cover transition duration-200 hover:scale-110"
+              />
+  
+              <div class="text-gray-900 text-lg font-bold">RAJDEEP MONDAL</div>
+  
+              <div class="text-purple-600">General Secretary</div>
+              <div
+                class="flex items-center justify-center gap-3 mt-2 w-auto h-5 text-gray-600"
+              >
+                <i
+                  class="fa-brands fa-twitter fa-lg cursor-pointer transition duration-200 hover:text-gray-400"
+                ></i>
+                <i
+                  class="fa-brands fa-linkedin fa-lg cursor-pointer transition duration-200 hover:text-gray-400"
+                ></i>
+                <i
+                  class="fa-brands fa-dribbble fa-lg cursor-pointer transition duration-200 hover:text-gray-400"
+                ></i>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center justify-center flex-wrap gap-4 mb-8 p-4">
+            <div class="card">
+              <img
+                src="images/Self-img - Yash Maroo.jpg"
+                class="w-24 h-24 rounded-full object-cover transition duration-200 hover:scale-110"
+              />
+  
+              <div class="text-gray-900 text-lg font-bold">YASH MAROO</div>
+  
+              <div class="text-purple-600">WebD Head</div>
+              <div
+                class="flex items-center justify-center gap-3 mt-2 w-auto h-5 text-gray-600"
+              >
+                <i
+                  class="fa-brands fa-twitter fa-lg cursor-pointer transition duration-200 hover:text-gray-400"
+                ></i>
+                <i
+                  class="fa-brands fa-linkedin fa-lg cursor-pointer transition duration-200 hover:text-gray-400"
+                ></i>
+                <i
+                  class="fa-brands fa-dribbble fa-lg cursor-pointer transition duration-200 hover:text-gray-400"
+                ></i>
+              </div>
+            </div>
+  
+            <div class="card">
+              <img
+                src="images/IMG_20200208_150029 - Leela Prasad.jpg"
+                class="w-24 h-24 rounded-full object-cover transition duration-200 hover:scale-110"
+              />
+  
+              <div class="text-gray-900 text-lg font-bold">D.LEELA PRASAD</div>
+  
+              <div class="text-purple-600">Alumni Head</div>
+  
+              <div
+                class="flex items-center justify-center gap-3 mt-2 w-auto h-5 text-gray-600"
+              >
+                <i
+                  class="fa-brands fa-twitter fa-lg cursor-pointer transition duration-200 hover:text-gray-400"
+                ></i>
+                <i
+                  class="fa-brands fa-linkedin fa-lg cursor-pointer transition duration-200 hover:text-gray-400"
+                ></i>
+                <i
+                  class="fa-brands fa-dribbble fa-lg cursor-pointer transition duration-200 hover:text-gray-400"
+                ></i>
+              </div>
+            </div>
+  
+            <div class="card">
+              <img
+                src="images/IMG_20190908_021827_282 - Ayush Maurya.jpg"
+                class="w-24 h-24 rounded-full object-cover transition duration-200 hover:scale-110"
+              />
+  
+              <div class="text-gray-900 text-lg font-bold">AYUSH MAURYA</div>
+  
+              <div class="text-purple-600">Treasurer</div>
+              <div
+                class="flex items-center justify-center gap-3 mt-2 w-auto h-5 text-gray-600"
+              >
+                <i
+                  class="fa-brands fa-twitter fa-lg cursor-pointer transition duration-200 hover:text-gray-400"
+                ></i>
+                <i
+                  class="fa-brands fa-linkedin fa-lg cursor-pointer transition duration-200 hover:text-gray-400"
+                ></i>
+                <i
+                  class="fa-brands fa-dribbble fa-lg cursor-pointer transition duration-200 hover:text-gray-400"
+                ></i>
+              </div>
+            </div>
+  
+            <div class="card">
+              <img
+                src="images/6b055a3f-5bf2-44c3-833d-e1487223b011 - Abhishek Paul(1).jpg"
+                class="w-24 h-24 rounded-full object-cover transition duration-200 hover:scale-110"
+              />
+  
+              <div class="text-gray-900 text-lg font-bold">ABHISHEK PAUL</div>
+  
+              <div class="text-purple-600">Operations Head</div>
+  
+              <div
+                class="flex items-center justify-center gap-3 mt-2 w-auto h-5 text-gray-600"
+              >
+                <i
+                  class="fa-brands fa-twitter fa-lg cursor-pointer transition duration-200 hover:text-gray-400"
+                ></i>
+                <i
+                  class="fa-brands fa-linkedin fa-lg cursor-pointer transition duration-200 hover:text-gray-400"
+                ></i>
+                <i
+                  class="fa-brands fa-dribbble fa-lg cursor-pointer transition duration-200 hover:text-gray-400"
+                ></i>
+              </div>
+            </div>
+  
+            <div class="card">
+              <img
+                src="images/IMG_20201206_231804 - Ayush Sharma.jpg"
+                class="w-24 h-24 rounded-full object-cover transition duration-200 hover:scale-110"
+              />
+  
+              <div class="text-gray-900 text-lg font-bold">AYUSH SHARMA</div>
+  
+              <div class="text-purple-600">Operations Head</div>
+  
+              <div
+                class="flex items-center justify-center gap-3 mt-2 w-auto h-5 text-gray-600"
+              >
+                <i
+                  class="fa-brands fa-twitter fa-lg cursor-pointer transition duration-200 hover:text-gray-400"
+                ></i>
+                <i
+                  class="fa-brands fa-linkedin fa-lg cursor-pointer transition duration-200 hover:text-gray-400"
+                ></i>
+                <i
+                  class="fa-brands fa-dribbble fa-lg cursor-pointer transition duration-200 hover:text-gray-400"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+ </div>
+ 
+</div>
+<div class="copyright">
+    <p>
+        <i class="fa fa-copyright"></i>2023 ECESS NITDGP
+    </p>
+  </div>
+  <script>
+    window.addEventListener("load", function () {
+      const preloader = document.querySelector(".loading-page");
+      preloader.classList.add("preload-finish");
+    });
+  </script>
+    <script>  
+const card = document.querySelectorAll(".card__inner");
+const btn = document.querySelectorAll(".btn");
+card.forEach(card=>{
+    card.classList.add('is-flipped')
+}); 
+
+btn[0].addEventListener("click",function(e){
+    card[0].classList.toggle('is-flipped');
+}) 
+btn[1].addEventListener("click",function(e){
+    card[0].classList.toggle('is-flipped');
+}) 
+btn[2].addEventListener("click",function(e){
+    card[1].classList.toggle('is-flipped');
+}) 
+btn[3].addEventListener("click",function(e){
+    card[1].classList.toggle('is-flipped');
+}) 
+btn[4].addEventListener("click",function(e){
+    card[2].classList.toggle('is-flipped');
+}) 
+btn[5].addEventListener("click",function(e){
+    card[2].classList.toggle('is-flipped');
+}) 
+btn[6].addEventListener("click",function(e){
+    card[3].classList.toggle('is-flipped');
+}) 
+btn[7].addEventListener("click",function(e){
+    card[3].classList.toggle('is-flipped');
+}) 
+btn[8].addEventListener("click",function(e){
+    card[4].classList.toggle('is-flipped');
+}) 
+btn[9].addEventListener("click",function(e){
+    card[4].classList.toggle('is-flipped');
+}) 
+btn[10].addEventListener("click",function(e){
+    card[5].classList.toggle('is-flipped');
+}) 
+btn[11].addEventListener("click",function(e){
+    card[5].classList.toggle('is-flipped');
+}) 
+
+let picture = document.querySelectorAll("#pp");
+        picture.forEach(picture => {
+         picture.addEventListener("click",function(){
+         picture.classList.toggle("forUser");
+         setTimeout(function(){
+            picture.classList.toggle("forUser");
+         },1000);
+         })
+        });
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+const links = document.querySelectorAll(".nav-links li");
+hamburger.addEventListener('click', ()=>{
+   //Animate Links
+    navLinks.classList.toggle("open");
+    links.forEach(link => {
+        link.classList.toggle("fade");
+    });
+    //Hamburger Animation
+    hamburger.classList.toggle("toggle");
+ });
+    </script>
+</body>
+</html>
